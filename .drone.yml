@@ -19,4 +19,15 @@ steps:
     limits:
       cpu: 10
       memory: 5Mib
+- name: docker
+  image: plugins/kaniko
+  settings:
+    repo: shubham149/test
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    dockerfile: Dockerfile
+    tags: vx1.0,latest
+    registry: "https://index.docker.io/v1/"
    
