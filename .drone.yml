@@ -14,6 +14,6 @@ steps:
   - sleep 1000
   resources:
     limits:
-      cpu: 10m
+      cpu: 10
       memory: 5Mib
    
