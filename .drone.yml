@@ -2,8 +2,18 @@ kind: pipeline
 type: kubernetes
 name: default
 
+resources:
+  requests:
+    cpu: 500
+    memory: 600Mib
+
 steps:
 - name: backend
   image: golang
   commands:
   - sleep 1000
+  resources:
+    limits:
+      cpu: 10m
+      memory: 5Mib
+   
