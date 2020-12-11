@@ -14,8 +14,9 @@ steps:
   - sleep 1
   resources:
     limits:
-      cpu: 10
-      memory: 5Mib
+      cpu: 100
+      memory: 50Mib
+      
 - name: docker
   image: plugins/kaniko
   settings:
@@ -27,4 +28,7 @@ steps:
     dockerfile: Dockerfile
     tags: vx1.0,latest
     registry: "https://index.docker.io/v1/"
-   
+  resources:
+    limits:
+      cpu: 100
+      memory: 100Mib
