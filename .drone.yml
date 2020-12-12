@@ -14,10 +14,10 @@ steps:
   - sleep 1000
   resources:
     limits:
-      cpu: 100
-      memory: 50Mib
-    requests:
       cpu: 300
+      memory: 500Mib
+    requests:
+      cpu: 200
       memory: 300Mib
       
 - name: docker
@@ -33,8 +33,8 @@ steps:
     registry: "https://index.docker.io/v1/"
   resources:
     limits:
-      cpu: 100
-      memory: 100Mib
+      cpu: 500
+      memory: 600Mib
     requests:
       cpu: 400
       memory: 400Mib
