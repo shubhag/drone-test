@@ -11,11 +11,14 @@ steps:
 - name: backend
   image: golang
   commands:
-  - sle 1
+  - sleep 1000
   resources:
     limits:
       cpu: 100
       memory: 50Mib
+    requests:
+      cpu: 300
+      memory: 300Mib
       
 - name: docker
   image: plugins/kaniko
@@ -32,3 +35,6 @@ steps:
     limits:
       cpu: 100
       memory: 100Mib
+    requests:
+      cpu: 400
+      memory: 400Mib
