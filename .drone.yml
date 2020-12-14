@@ -11,7 +11,7 @@ steps:
 - name: backend
   image: golang
   commands:
-  - sleep 1000
+  - sleep 1
   resources:
     limits:
       cpu: 300
@@ -32,9 +32,6 @@ steps:
     tags: vx1.0,latest
     registry: "https://index.docker.io/v1/"
   resources:
-    limits:
-      cpu: 500
-      memory: 600Mib
     requests:
       cpu: 400
       memory: 400Mib
